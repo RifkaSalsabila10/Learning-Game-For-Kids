@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Belajar Seru SD</title>
+    <link rel="stylesheet" href="Project.css">
+</head>
+<body>
+    <div class="navbar">
+        <div class="navbar-logo">🎓 Learning Game For Kids</div>
+        <div class="navbar-menu">
+            <div class="navbar-item" onclick="keBeranda()">Beranda</div>
+            <div class="navbar-item" onclick="keTentang()">Tentang</div>
+        </div>
+    </div>
+
+    <div class="container">
+        <div id="halamanBeranda">
+            <header>
+                <h1>🎓 Learning Game For Kids</h1>
+                <p>Belajar sambil bermain itu menyenangkan!</p>
+            </header>
+
+            <div class="menu" id="menu">
+                <div class="menu-card" onclick="bukaKuis()">
+                    <div class="icon">📚</div>
+                    <h3>Kuis Cepat</h3>
+                    <p>Tes pengetahuanmu!</p>
+                </div>
+                <div class="menu-card" onclick="bukaMath()">
+                    <div class="icon">➕</div>
+                    <h3>Matematika</h3>
+                    <p>Latihan hitung-hitungan</p>
+                </div>
+                <div class="menu-card" onclick="bukaMemory()">
+                    <div class="icon">🎮</div>
+                    <h3>Ingat-ingatan</h3>
+                    <p>Cocokkan kartu!</p>
+                </div>
+            </div>
+
+            <div class="game-area" id="quizGame">
+                <button class="back-btn" onclick="tutupGame()">← Kembali</button>
+                <h2>Kuis Pengetahuan Umum</h2>
+                <div class="score">Skor: <span id="quizScore">0</span>/5</div>
+                <div class="question-box" id="quizQuestion"></div>
+                <div id="quizOptions"></div>
+            </div>
+
+            <div class="game-area" id="mathGame">
+                <button class="back-btn" onclick="tutupGame()">← Kembali</button>
+                <h2>Latihan Matematika</h2>
+                <div class="score">Skor: <span id="mathScore">0</span></div>
+                <div class="question-box" id="mathQuestion"></div>
+                <div class="math-container">
+                    <input type="number" id="mathInput" class="math-input" placeholder="?">
+                    <button class="check-btn" onclick="cekJawaban()">Cek</button>
+                </div>
+                <div id="mathResult"></div>
+            </div>
+
+            <div class="game-area" id="memoryGame">
+                <button class="back-btn" onclick="tutupGame()">← Kembali</button>
+                <h2>Permainan Ingat-ingatan</h2>
+                <div class="score">Pasangan: <span id="memoryScore">0</span>/4</div>
+                <div class="memory-grid" id="memoryGrid"></div>
+            </div>
+        </div>
+
+        <div class="tentang-page" id="halamanTentang">
+            <button class="back-btn" onclick="keBeranda()">← Kembali</button>
+            <h2>📖 Tentang Platform Belajar Seru SD</h2>
+            
+            <p><strong>Latar Belakang</strong></p>
+            <p>Di era digital saat ini, anak-anak sekolah dasar membutuhkan cara belajar yang menyenangkan dan menarik. Belajar dengan cara yang monoton seringkali membuat anak-anak cepat bosan dan kehilangan minat untuk belajar.</p>
+            
+            <p>Oleh karena itu, kami membuat website "Platform Belajar Interaktif untuk Anak SD" yang dirancang khusus untuk membantu anak-anak belajar dengan cara yang menyenangkan.</p>
+
+            <p style="margin-top: 30px;"><strong>Fitur-fitur:</strong></p>
+            <p>🎯 <strong>Kuis Cepat</strong> - Tes pengetahuan umum dengan berbagai soal menarik</p>
+            <p>➕ <strong>Matematika</strong> - Latihan hitung-hitungan untuk meningkatkan kemampuan matematika</p>
+            <p>🎮 <strong>Ingat-ingatan</strong> - Permainan mencocokkan kartu untuk melatih daya ingat</p>
+        </div>
+        
+        
+    </div>
+
+    <footer>
+      
+            <p>© 2026 Belajar Seru SD</p>
+            <p>Dibuat dengan ❤️ untuk anak-anak Indonesia</p>
+       
+    </footer>
+    <script src="Project.js"></script>
+</body>
+</html>
