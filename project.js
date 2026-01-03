@@ -1,6 +1,5 @@
-// =============================================
 // BAGIAN 1: VARIABEL (TEMPAT MENYIMPAN DATA)
-// =============================================
+
 var skorKuis = 0;
 var skorMath = 0;
 var skorMemory = 0;
@@ -13,9 +12,9 @@ var kartu1 = null;
 var kartu2 = null;
 var nomorSoal = 0;
 
-// =============================================
+
 // FUNGSI NAVIGASI HALAMAN
-// =============================================
+
 function keBeranda() {
     document.getElementById("halamanBeranda").style.display = "block";
     document.getElementById("halamanTentang").classList.remove("active");
@@ -27,9 +26,7 @@ function keTentang() {
     document.getElementById("halamanTentang").classList.add("active");
 }
 
-// =============================================
 // BAGIAN 2: DATA SOAL KUIS
-// =============================================
 var soalKuis = [
     {
         soal: "Apa ibu kota Indonesia?",
@@ -58,9 +55,7 @@ var soalKuis = [
     }
 ];
 
-// =============================================
 // BAGIAN 3: FUNGSI BUKA/TUTUP GAME
-// =============================================
 function bukaKuis() {
     document.getElementById("menu").style.display = "none";
     document.getElementById("quizGame").classList.add("active");
@@ -92,9 +87,7 @@ function tutupGame() {
     document.getElementById("memoryGame").classList.remove("active");
 }
 
-// =============================================
 // BAGIAN 4: GAME KUIS
-// =============================================
 function tampilkanSoalKuis() {
     if (nomorSoal >= 5) {
         var hasilDiv = document.getElementById("quizOptions");
@@ -131,9 +124,7 @@ function cekJawabanKuis(jawaban) {
     setTimeout(tampilkanSoalKuis, 500);
 }
 
-// =============================================
 // BAGIAN 5: GAME MATEMATIKA
-// =============================================
 function buatSoalBaru() {
     angka1 = Math.floor(Math.random() * 10) + 1;
     angka2 = Math.floor(Math.random() * 10) + 1;
@@ -157,9 +148,7 @@ function cekJawaban() {
     setTimeout(buatSoalBaru, 2000);
 }
 
-// =============================================
 // BAGIAN 6: GAME MEMORY
-// =============================================
 function buatKartu() {
     var emoji = ["🍎", "🍎", "🍌", "🍌", "🍇", "🍇", "🍊", "🍊"];
     emoji.sort(() => Math.random() - 0.5);
