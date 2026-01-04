@@ -1,5 +1,3 @@
-// BAGIAN 1: VARIABEL (TEMPAT SIMPAN DATA)
-
 let skor = 0;               
 let skorMath = 0;           
 let skorMemory = 0;        
@@ -8,7 +6,6 @@ let jawabanCorrectMath = 0;
 let kartu1 = null;          
 let kartu2 = null;          
 
-// Data soal kuis
 let soal = [
     ["Apa ibu kota Indonesia?", "Jakarta", "Bandung", "Surabaya", "Jakarta"],
     ["Hewan apa yang disebut Raja Hutan?", "Harimau", "Singa", "Gajah", "Singa"],
@@ -16,8 +13,6 @@ let soal = [
     ["Planet terdekat dengan Matahari?", "Venus", "Merkurius", "Mars", "Merkurius"],
     ["Berapa sisi pada segitiga?", "2", "3", "4", "3"]
 ];
-
-// BAGIAN 2: FUNGSI PINDAH HALAMAN
 
 function tampilBeranda() {
     document.getElementById("beranda").style.display = "block";
@@ -34,8 +29,6 @@ function tampilTentang() {
     document.getElementById("math").style.display = "none";
     document.getElementById("memory").style.display = "none";
 }
-
-// BAGIAN 3: FUNGSI GAME KUIS
 
 function mulaiKuis() {
     document.getElementById("beranda").style.display = "none";
@@ -80,9 +73,6 @@ function cekJawaban(jawabanUser) {
     tampilSoal();
 }
 
-
-// BAGIAN 4: FUNGSI GAME MATEMATIKA
-
 function mulaiMath() {
     document.getElementById("beranda").style.display = "none";
     document.getElementById("math").style.display = "block";
@@ -125,7 +115,6 @@ function cekJawabanMath() {
     setTimeout(buatSoalMath, 2000);
 }
 
-// BAGIAN 5: FUNGSI GAME MEMORY
 
 function mulaiMemory() {
     document.getElementById("beranda").style.display = "none";
@@ -191,7 +180,6 @@ function cekCocok() {
     kartu2 = null;
 }
 
-// Listener untuk input Enter di Matematika
 document.getElementById("jawabanMath").addEventListener("keypress", function(e) {
     if (e.key == "Enter") {
         cekJawabanMath();
